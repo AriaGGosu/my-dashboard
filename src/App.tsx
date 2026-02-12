@@ -34,11 +34,11 @@ function App() {
 
   return (
     <Routes>
-      {/* Valentine: ruta independiente, sin loading ni experience provider */}
-      <Route path="/valentine" element={<Valentine />} />
+      {/* Valentine: ruta raíz — lo primero que se ve al entrar */}
+      <Route path="/" element={<Valentine />} />
 
       {/* Main app: con experience choice, loading, etc. */}
-      <Route path="*" element={
+      <Route path="/home/*" element={
         <AnimatePresence mode="wait">
           {showDialog ? (
             <ExperienceChoiceDialog key="choice" onChoose={handleChooseExperience} />
