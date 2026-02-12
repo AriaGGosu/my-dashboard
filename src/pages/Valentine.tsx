@@ -291,22 +291,11 @@ const PRESENTER_SCRIPT: PresenterLine[] = [
   
   
 
+   
   
   
   
   
-  
-  { text: "¡Hola! Bienvenida a esta experiencia especial de San Valentín...", animation: "defalt_idle", duration: 3500, buttonText: "Continuar →" },
-  { text: "Antes de empezar, cuéntame... ¿cómo te llamas?", animation: "idle2", duration: 3500, buttonText: "Me llamo..." },
-  { text: "Antes de empezar, cuéntame... ¿cómo te llamas?", animation: "idle2_in", duration: 3500, buttonText: "Me llamo..." },
-  { text: "¡Así que vienes a por San Valentín! ¿Estás lista?", animation: "celebrate", duration: 3500, buttonText: "¡Lista!" },
-  { text: "Dime... ¿estás enamorada?", animation: "click", duration: 3500, buttonText: "Quizás..." },
-  { text: "¡Bueno, basta de mí! Vamos a lo que vinimos!!", animation: "win1", duration: 3500, buttonText: "¡Vamos!" },
-  { text: "¡Bueno, basta de mí! Vamos a lo que vinimos!!", animation: "win2", duration: 3500, buttonText: "¡Vamos!" },
-  { text: "¡Bueno, basta de mí! Vamos a lo que vinimos!!", animation: "win3", duration: 3500, buttonText: "¡Vamos!" },
-  { text: "¡Bueno, basta de mí! Vamos a lo que vinimos!!", animation: "win4", duration: 3500, buttonText: "¡Vamos!" },
-  { text: "Primero, elige a tu compañero para esta aventura...", animation: "trafficcontrol", duration: 3500, holdLastFrame: true },
-  { text: "Primero, elige a tu compañero para esta aventura...", animation: "turn_idle", duration: 3500, holdLastFrame: true },
 ];
 
 /** Determine which color turret each node gets based on incoming optionA (red) vs optionB (blue) */
