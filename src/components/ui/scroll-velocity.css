@@ -1,0 +1,19 @@
+/* Scroll Velocity — React Bits style */
+.scroll-velocity-parallax {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.scroll-velocity-scroller {
+  display: inline-flex;
+  white-space: nowrap;
+  will-change: transform;
+}
+
+.scroll-velocity-parallax .custom-scroll-text {
+  display: inline-block;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding-right: 0.25em;
+}

@@ -1,0 +1,41 @@
+{
+  "description": "Metadata para sincronizar animaciones con el audio. durationSeconds es opcional: si no se pone, se usa la duración real del MP3 al cargar.",
+  "clips": [
+    {
+      "id": "1",
+      "src": "/audio/overview/Overview.mp3",
+      "textRef": "overview-label",
+      "durationSeconds": null
+    },
+    {
+      "id": "2",
+      "src": "/audio/overview/Having_a_portfolio_that_produces_high_quality.mp3",
+      "textRef": "headline",
+      "durationSeconds": null
+    },
+    {
+      "id": "3",
+      "src": "/audio/overview/what_i_do.mp3",
+      "textRef": "what-i-do",
+      "durationSeconds": null
+    },
+    {
+      "id": "4",
+      "src": "/audio/overview/I_craft_interfaces_and_experiences_that_blend.mp3",
+      "textRef": "paragraph-1",
+      "durationSeconds": null
+    },
+    {
+      "id": "5",
+      "src": "/audio/overview/What_I_offer.mp3",
+      "textRef": "what-i-offer",
+      "durationSeconds": null
+    },
+    {
+      "id": "6",
+      "src": "/audio/overview/Brand_aligned_digital_products__from_concept.mp3",
+      "textRef": "paragraph-2",
+      "durationSeconds": null
+    }
+  ]
+}
