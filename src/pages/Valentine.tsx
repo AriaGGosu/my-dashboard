@@ -110,7 +110,7 @@ export default function Valentine() {
   }, [phase]);
 
   return (
-    <div style={{ width: "100vw", height: "100vh", background: "#000", position: "relative", overflow: "hidden" }}>
+    <div style={{ width: "100vw", height: "100dvh", background: "#000", position: "relative", overflow: "hidden" }}>
       {/* Loading screen */}
       <AnimatePresence>
         {phase === "loading" && (
