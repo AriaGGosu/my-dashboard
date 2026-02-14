@@ -8,6 +8,7 @@ import {
   SCUTTLE_CRAB_PURPLE_GLB,
   SCUTTLE_CRAB_GREEN_GLB,
   CRAB_MINIMAP_IMAGES,
+  PRESENTER_GLB,
 } from "./valentine/data";
 
 // Lazy-load heavy 3D scenes — each one only loads when its phase is active
@@ -17,6 +18,18 @@ const PresenterScreen = lazy(() =>
 const ValentineGame = lazy(() =>
   import("./valentine/scene").then(m => ({ default: m.ValentineGame }))
 );
+
+// Cache the preload promise so it only runs once
+let _preloadPromise: Promise<void> | null = null;
+function preloadPresenter(): Promise<void> {
+  if (!_preloadPromise) {
+    _preloadPromise = Promise.all([
+      import("./valentine/helpers"),          // preload the JS module
+      fetch(PRESENTER_GLB).catch(() => {}),   // preload the GLB into browser cache
+    ]).then(() => {});
+  }
+  return _preloadPromise;
+}
 
 // ——————————————————————————————————————————————
 //  PAGE: Valentine
@@ -31,6 +44,8 @@ export default function Valentine() {
   const [audioEnabled, setAudioEnabled] = useState(false);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
+  const [presenterReady, setPresenterReady] = useState(false);
+
   const crabGlb = selectedCrab === "purple" ? SCUTTLE_CRAB_PURPLE_GLB : SCUTTLE_CRAB_GREEN_GLB;
   const crabMinimapImg = CRAB_MINIMAP_IMAGES[selectedCrab];
 
@@ -43,14 +58,18 @@ export default function Valentine() {
     return () => { audio.pause(); audio.src = ""; };
   }, []);
 
-  // Phase 1: Loading → audioConsent
+  // Start preloading the presenter module + GLB immediately
   useEffect(() => {
-    if (phase !== "loading") return;
-    const t = setTimeout(() => {
-      setPhase("audioConsent");
-    }, 1500);
+    preloadPresenter().then(() => setPresenterReady(true));
+  }, []);
+
+  // Phase 1: Loading → audioConsent (only when presenter assets are ready)
+  useEffect(() => {
+    if (phase !== "loading" || !presenterReady) return;
+    // Small extra delay so the transition feels smooth
+    const t = setTimeout(() => setPhase("audioConsent"), 400);
     return () => clearTimeout(t);
-  }, [phase]);
+  }, [phase, presenterReady]);
 
   // Handle audio consent choice
   const handleAudioChoice = useCallback((enabled: boolean) => {

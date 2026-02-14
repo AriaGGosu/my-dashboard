@@ -1240,18 +1240,17 @@ export function PresenterScreen({ onComplete }: { onComplete: (selectedCrab: "pu
             transition={{ duration: 0.4 }}
             style={{
               position: "absolute",
-              top: 0,
               left: 0,
               right: 0,
-              bottom: 0,
+              bottom: isMobile ? 20 : "auto",
+              top: isMobile ? "auto" : 0,
+              ...(isMobile ? {} : { height: "100%" }),
               display: "flex",
-              alignItems: isMobile ? "end" : "center",
-              justifyContent: isMobile ? "center" : "center",
+              alignItems: isMobile ? "flex-end" : "center",
+              justifyContent: "center",
               pointerEvents: "none",
               zIndex: 10,
-              paddingBottom: isMobile ? "20px" : "0",
-              paddingTop: isMobile ? "0" : "15vh",
-              paddingRight: isMobile ? "0" : "0",
+              paddingTop: isMobile ? 0 : "15vh",
             }}
           >
             <div style={{
@@ -1282,9 +1281,6 @@ export function PresenterScreen({ onComplete }: { onComplete: (selectedCrab: "pu
                   <span style={{ opacity: 0.4, animation: "blink 1s infinite" }}>|</span>
                 </p>
 
-
-
-
                 {!currentLine?.autoAdvance && (
                   <motion.button
                     whileHover={{ scale: 1.03 }}
@@ -1302,7 +1298,6 @@ export function PresenterScreen({ onComplete }: { onComplete: (selectedCrab: "pu
                   </motion.button>
                 )}
 
-
               </div>
             </div>
           </motion.div>
@@ -1316,18 +1311,17 @@ export function PresenterScreen({ onComplete }: { onComplete: (selectedCrab: "pu
             transition={{ duration: 0.5 }}
             style={{
               position: "absolute",
-              top: 0,
               left: 0,
               right: 0,
-              bottom: 0,
+              bottom: isMobile ? 20 : "auto",
+              top: isMobile ? "auto" : 0,
+              ...(isMobile ? {} : { height: "100%" }),
               display: "flex",
-              alignItems: isMobile ? "end" : "center",
-              justifyContent: isMobile ? "center" : "center",
+              alignItems: isMobile ? "flex-end" : "center",
+              justifyContent: "center",
               pointerEvents: "none",
               zIndex: 10,
-              paddingBottom: isMobile ? "20px" : "0",
-              paddingTop: isMobile ? "0" : "15vh",
-              paddingRight: isMobile ? "0" : "0",
+              paddingTop: isMobile ? 0 : "15vh",
             }}
           >
             <div style={{
