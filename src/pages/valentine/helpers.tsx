@@ -973,7 +973,7 @@ export function PresenterModel({ animName, holdLastFrame = false }: { animName: 
   });
 
   return (
-    <group ref={groupRef} position={[0, -0.7, 0]} scale={1.3}>
+    <group ref={groupRef} position={[0, -0.7, 0]} scale={1.5}>
       <primitive object={scene} />
     </group>
   );
