@@ -3335,7 +3335,7 @@ function PentakillConcertScene({ analyserData }: { analyserData: React.RefObject
       {/* Fire anchored to camera — always visible from below in every shot */}
       {/* <CameraFire offset={[0, -10, -20]} scale={10} /> */}
 
-      {/* <Fire position={[0, 0, 0]} scale={10} billboard /> */}
+      <Fire position={[0, 0, 0]} scale={10} billboard />
       {/* Concert lighting */}
       <ConcertLights />
 
