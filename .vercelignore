@@ -1,0 +1,21 @@
+# ─── Blender source files (NOT needed for web) ───
+public/aura 2.0/FINAL_01.blend
+public/aura 2.0/FINAL_01.blend1
+
+# ─── ZIP archives (NOT needed for web) ───
+public/*.zip
+
+# ─── Example/sandbox projects (NOT used by the app) ───
+public/40-particles-morphing-shader-final/
+public/sandbox-extracted/
+public/d8b4fca6-extracted/
+public/cono_extracted/
+public/particulasblancas/
+
+# ─── Unused GLB models ───
+public/glb/raphtalia_-.glb
+public/glb/shidler_cases.glb
+public/glb/lol/blue_sentinel.glb
+public/glb/lol/ashe_crystalis_motus.glb
+public/glb/lol/tft4_npc_nexus.glb
+public/glb/stage/Concert Stage.glb
