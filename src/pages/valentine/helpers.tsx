@@ -1240,17 +1240,12 @@ export function PresenterScreen({ onComplete }: { onComplete: (selectedCrab: "pu
             transition={{ duration: 0.4 }}
             style={{
               position: "absolute",
-              left: 0,
-              right: 0,
-              bottom: isMobile ? "calc(20px + env(safe-area-inset-bottom, 0px))" : "auto",
-              top: isMobile ? "auto" : 0,
-              ...(isMobile ? {} : { height: "100%" }),
+              inset: 0,
               display: "flex",
-              alignItems: isMobile ? "flex-end" : "center",
+              alignItems: "center",
               justifyContent: "center",
               pointerEvents: "none",
               zIndex: 10,
-              paddingTop: isMobile ? 0 : "15vh",
             }}
           >
             <div style={{
@@ -1311,17 +1306,12 @@ export function PresenterScreen({ onComplete }: { onComplete: (selectedCrab: "pu
             transition={{ duration: 0.5 }}
             style={{
               position: "absolute",
-              left: 0,
-              right: 0,
-              bottom: isMobile ? "calc(20px + env(safe-area-inset-bottom, 0px))" : "auto",
-              top: isMobile ? "auto" : 0,
-              ...(isMobile ? {} : { height: "100%" }),
+              inset: 0,
               display: "flex",
-              alignItems: isMobile ? "flex-end" : "center",
+              alignItems: "center",
               justifyContent: "center",
               pointerEvents: "none",
               zIndex: 10,
-              paddingTop: isMobile ? 0 : "15vh",
             }}
           >
             <div style={{
